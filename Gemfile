@@ -46,6 +46,17 @@ group :development, :test do
   gem 'mini_backtrace', '0.1.3'
   gem 'guard-minitest', '2.3.1'
 
-  gem 'bootstrap'
+  gem 'bootstrap-sass'
+
+
+group :development do
+    gem 'quiet_assets'
+    gem 'better_errors'
+    gem 'binding_of_caller'
+end
+
+gem 'carrierwave'
+gem 'rmagick'
+
 end
 
