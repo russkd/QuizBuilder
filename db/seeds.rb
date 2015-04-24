@@ -3,5 +3,9 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+  5.times do 
+    questions = Question.create({ question_name: 'Chicago', question_body: 'Where is Chicago?', answer: 'Illinois' })
+    end
+
+
+
