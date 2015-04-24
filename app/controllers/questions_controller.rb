@@ -49,7 +49,7 @@ end
 
 private
   def question_params
-      params.require(:question).permit(:question_name, :question_body)
+      params.require(:question).permit(:question_name, :question_body, :answer)
   end
 
 end
