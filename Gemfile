@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.2.1'
+gem 'bootstrap-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -45,7 +46,6 @@ group :development, :test do
   gem 'mini_backtrace', '0.1.3'
   gem 'guard-minitest', '2.3.1'
   gem 'sqlite3'
-  gem 'bootstrap-sass'
 end
 
 group :production do
