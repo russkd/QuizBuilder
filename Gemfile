@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
-
+ruby '2.2.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -45,9 +44,14 @@ group :development, :test do
   gem 'minitest-reporters', '1.0.5'
   gem 'mini_backtrace', '0.1.3'
   gem 'guard-minitest', '2.3.1'
-
+  gem 'sqlite3'
   gem 'bootstrap-sass'
+end
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 group :development do
     gem 'quiet_assets'
@@ -57,6 +61,6 @@ end
 
 gem 'carrierwave'
 gem 'rmagick'
+gem 'pry-rails'
 
-end
 

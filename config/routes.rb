@@ -33,6 +33,16 @@ Rails.application.routes.draw do
   patch 'questions/:id/' => 'questions#update'
   delete 'questions/:id' => 'questions#destroy'
 
+  # Quiz routes
+  get   'quizzes' => 'quizzes#index'
+  post  'quizzes' => 'quizzes#create'
+  get   'quizzes/new' => 'quizzes#new' , as: 'new_quiz'
+  get   'quizzes/:id/edit' => 'quizzes#edit', as: 'edit_quiz'
+  get   'quizzes/:id' => 'quizzes#show', as: 'quiz'
+  put   'quizzes/:id/' => 'quizzes#update'
+  patch 'quizzes/:id/' => 'quizzes#update'
+  delete 'quizzes/:id' => 'quizzes#destroy'
+
   # Answer routes
   get   'answers' => 'answers#index'
   post  'answers' => 'answers#create'
