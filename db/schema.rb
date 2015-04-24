@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150424014917) do
+ActiveRecord::Schema.define(version: 20150424191833) do
 
   create_table "answers", force: :cascade do |t|
     t.text     "answer_body"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20150424014917) do
     t.datetime "updated_at",    null: false
     t.integer  "user_id"
     t.text     "answer"
+    t.string   "subject"
   end
 
   add_index "questions", ["user_id"], name: "index_questions_on_user_id"
