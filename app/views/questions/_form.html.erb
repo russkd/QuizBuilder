@@ -14,7 +14,7 @@
             <%= f.text_field :answer, class: 'form-control' %>
 
             <%= f.label :subject %>
-            <%= f.text_field :subject, class: 'form-control' %>
+            <%= f.text_field :subject.downcase, class: 'form-control'  %>
 
             <%= f.submit "Add a question", class: "btn btn-primary" %>
         <% end %>

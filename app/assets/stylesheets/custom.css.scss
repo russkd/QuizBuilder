@@ -58,6 +58,8 @@ input {
     width: 100%;
     margin-top: 45px;
     @include box_sizing;
+    background-color: white
+
 }
 
 /* universal */
@@ -128,7 +130,7 @@ section {
 }
 
 
-/* typography */
+// typography
 h1, h2, h3, h4, h5, h6 {
     line-height: 1;
 }
@@ -150,8 +152,17 @@ p {
     font-size: 1.1em;
     line-height: 1.7em;
 }
+ 
+// Quiz Search Page
+#container {
+  display: -webkit-flex;
+  display: flex;
+  border: solid black 3px;
 
-/* footer */
+}
+
+
+// footer
 
 footer {
     margin-top: 45px;

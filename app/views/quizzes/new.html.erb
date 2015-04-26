@@ -1,19 +1,30 @@
 <% provide(:title, 'Build the Quiz') %>
-<h1>Build the Quiz</h1>
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
-        <%= form_for(@question) do |f| %>
-        <%= render 'shared/error_messages' %>
-            <%= f.label :question_name %>
-            <%= f.text_field :question_name, class: 'form-control' %>
-
-            <%= f.label :question_body %>
-            <%= f.text_field :question_body, class: 'form-control' %>
-
-            <%= f.label :answer %>
-            <%= f.text_field :answer, class: 'form-control' %>
-
-            <%= f.submit "Add a question", class: "btn btn-primary" %>
+    <h1>Possible Questions</h1>
+    
+      <ul>
+        <% @questions.each do |x| %>
+        <li class = checkbox inline>
+          <%= check_box_tag '@questions[]', @question_name %>
+          <%= x.question_body %>
+        </li>
         <% end %>
+      </ul>
+      <% form_tag(quizzes_selected_questions_path, method: :put) do %>
+      <% end %>
+        <%= submit_tag "Select the questions for the quiz" %>
+    
+
+        <h1>Search by Subject</h1>
+
+          <%= form_tag(new_quiz_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search Questions" %>
+            <%= submit_tag "Search", :name => nil %>
+          <% end %>
+
+    
+    
     </div>
 </div>
+

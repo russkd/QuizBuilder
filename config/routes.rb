@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   get   'quizzes/:id/edit' => 'quizzes#edit', as: 'edit_quiz'
   get   'quizzes/:id' => 'quizzes#show', as: 'quiz'
   put   'quizzes/:id/' => 'quizzes#update'
+  put   'quizzes/selected_questions' => 'quizzes#selected_questions'
   patch 'quizzes/:id/' => 'quizzes#update'
   delete 'quizzes/:id' => 'quizzes#destroy'
 
