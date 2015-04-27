@@ -33,7 +33,6 @@ def create
 end
 
 def update
-  @quiz = current_quiz
   @quiz = Quiz.find(params[:id])
  
   if @quiz.update(question_params)
@@ -46,11 +45,10 @@ end
 def selected_questions
   Question.update_all(:id => params[:question_names])
   params[:question_names]
-  redirect_to new_quiz_path
+  redirect_to 'quizzes#new'
 end
 
 def destroy
-  @quiz = current_quiz
   @quiz = Quiz.find(params[:id])
   @quiz.destroy
  

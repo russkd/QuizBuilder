@@ -2,7 +2,8 @@
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
     <h1>Possible Questions</h1>
-    
+
+    <%= form_tag(quizzes_selected_questions_path, method: :get) do %>
       <ul>
         <% @questions.each do |x| %>
         <li class = checkbox inline>
@@ -11,9 +12,9 @@
         </li>
         <% end %>
       </ul>
-      <% form_tag(quizzes_selected_questions_path, method: :put) do %>
+      <%= submit_tag "Select the questions for the quiz"  %>
       <% end %>
-        <%= submit_tag "Select the questions for the quiz" %>
+        
     
 
         <h1>Search by Subject</h1>

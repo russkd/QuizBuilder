@@ -37,10 +37,10 @@ Rails.application.routes.draw do
   get   'quizzes' => 'quizzes#index'
   post  'quizzes' => 'quizzes#create'
   get   'quizzes/new' => 'quizzes#new' , as: 'new_quiz'
+  get   'quizzes/selected_questions' => 'quizzes#selected_questions'
   get   'quizzes/:id/edit' => 'quizzes#edit', as: 'edit_quiz'
   get   'quizzes/:id' => 'quizzes#show', as: 'quiz'
   put   'quizzes/:id/' => 'quizzes#update'
-  post   'quizzes/selected_questions' => 'quizzes#selected_questions'
   patch 'quizzes/:id/' => 'quizzes#update'
   delete 'quizzes/:id' => 'quizzes#destroy'
 
