@@ -19,3 +19,7 @@
             </section>
         </aside>
     </div>
+
+    <%= link_to 'Edit', edit_question_path(@question) %><br>
+    <%= link_to 'Destroy', @question, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%#= link_to 'Back', posts_path %>
