@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
 def new
     @user = current_user
-    @question = @user.questions.new
+    @question = Question.new
 end
 
 def index
@@ -49,7 +49,8 @@ end
 
 private
   def question_params
-      params.require(:question).permit(:question_name, :question_body, :answer, :subject)
+      params.require(:question).permit(:name, :email, :password, :question_name, :question_body, :answer, :subject, :quiz, 
+      :password_confirmation)
   end
 
 end
