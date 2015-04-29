@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150424191833) do
+ActiveRecord::Schema.define(version: 20150428025444) do
 
   create_table "answers", force: :cascade do |t|
     t.text     "answer_body"
@@ -36,15 +36,12 @@ ActiveRecord::Schema.define(version: 20150424191833) do
 
   add_index "questions", ["user_id"], name: "index_questions_on_user_id"
 
-  create_table "quiz_questions", force: :cascade do |t|
+  create_table "quizquestions", force: :cascade do |t|
+    t.integer  "question_id"
+    t.integer  "quiz_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "quiz_id"
-    t.integer  "question_id"
   end
-
-  add_index "quiz_questions", ["question_id"], name: "index_quiz_questions_on_question_id"
-  add_index "quiz_questions", ["quiz_id"], name: "index_quiz_questions_on_quiz_id"
 
   create_table "quizzes", force: :cascade do |t|
     t.string   "name"

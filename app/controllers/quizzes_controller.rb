@@ -43,9 +43,18 @@ def update
 end
 
 def selected_questions
-  Question.update_all(:id => params[:question_names])
-  params[:question_names]
-  redirect_to 'quizzes#new'
+  @quiz = Quiz.create
+  @questions = params['questions_names']
+  @questions.each do |quest|
+    Quizquestion.create(quiz_id: @quiz.id, question_id: quest.to_i)
+  end
+  redirect_to quizzes_path
+  # @glenn = Quizquestion.new(quiz_id:1,question_id:47)
+
+
+  # Question.update_all(:id => params['question_names'])
+  # params[:question_names]
+  
 end
 
 def destroy
