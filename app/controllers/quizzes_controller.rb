@@ -49,12 +49,6 @@ def selected_questions
     Quizquestion.create(quiz_id: @quiz.id, question_id: quest.to_i)
   end
   redirect_to quizzes_path
-  # @glenn = Quizquestion.new(quiz_id:1,question_id:47)
-
-
-  # Question.update_all(:id => params['question_names'])
-  # params[:question_names]
-  
 end
 
 def destroy

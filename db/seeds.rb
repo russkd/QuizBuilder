@@ -9,9 +9,9 @@
 # Post.create(title:'Third', body:'post')
 # Post.create(title:'Fourth', body:'post')
 # Post.create(title:'Fifth', body:'post')
-  
+
 Question.create({ question_name: '1st US President', question_body: 'Who was the first US President?', answer: 'George Washington', subject: 'US History' })
-Question.create({ question_name: '2ne US President', question_body: 'Who was the second US President?', answer: 'John Adams', subject: 'US History' })
+Question.create({ question_name: '2nd US President', question_body: 'Who was the second US President?', answer: 'John Adams', subject: 'US History' })
 Question.create({ question_name: '3rd US President', question_body: 'Who was the third US President?', answer: 'Thomas Jefferson', subject: 'US History' })
 Question.create({ question_name: '4th US President', question_body: 'Who was the fourt US President?', answer: 'James Madison', subject: 'US History' })
 Question.create({ question_name: '5th US President', question_body: 'Who was the fifth US President?', answer: 'James Monroe', subject: 'US History' })
@@ -37,7 +37,3 @@ Question.create({ question_name: '24th US President', question_body: 'Who was th
 Question.create({ question_name: '25th US President', question_body: 'Who was the twenty-fifth US President?', answer: 'William McKinley', subject: 'US History' })
 Question.create({ question_name: '26th US President', question_body: 'Who was the twenty-sixth US President?', answer: 'Theodore Roosevelt', subject: 'US History' })
 Question.create({ question_name: '27th US President', question_body: 'Who was the twenty-seventh US President?', answer: 'William Howard Taft', subject: 'US History' })
-  
-
-
-
